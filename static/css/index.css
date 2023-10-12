@@ -23,10 +23,18 @@ body {
   padding-bottom: 3rem;
 }
 
-.teaser {
+/* .teaser {
   font-family: 'Google Sans', sans-serif;
+} */
+
+.teaser {
+  font-family: Cursive;
 }
 
+.hero {
+  font-family: Cursive;
+  font-weight: bold;
+}
 
 .publication-title {
 }
@@ -47,12 +55,20 @@ body {
 .publication-header .hero-body {
 }
 
-.publication-title {
+/* .publication-title {
     font-family: 'Google Sans', sans-serif;
+} */
+
+.publication-title {
+  font-family: Cursive;
 }
 
-.publication-authors {
+/* .publication-authors {
     font-family: 'Google Sans', sans-serif;
+} */
+
+.publication-authors {
+  font-family: Cursive;
 }
 
 .publication-venue {

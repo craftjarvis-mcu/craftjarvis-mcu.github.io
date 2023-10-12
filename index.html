@@ -154,7 +154,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Our GROOT can solve open-ended tasks that are specified by reference videos. 
       </h2>
     </div>
   </div>
@@ -185,7 +185,7 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3">Architecture Design</h2>
       <img src="static/images/architecture.png" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
+      <h2 class="subtitle has-text-justified">
         <br>Left: In the training stage, a video encoder (non-causal transformer) learns to extract the semantic meaning and transfer the video (state sequence) into the goal embedding space. A goal-conditioned policy (causal transformer) is learned to predict actions following the given instructions. We learn the agent using behavior cloning under a KL constraint. 
         <br>Right: During the inference, any reference video is passed into the video encoder to generate the goal embeddings that drives the policy to interact with the environment. 
       </h2>
@@ -201,7 +201,6 @@
 
 <section class="section hero is-light">
   <div class="hero-body"> <div class="container is-max-desktop">
-
     <h2 class="title is-3">Experimental Results</h2>
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -211,7 +210,7 @@
         <h2 class="subtitle has-text-centered">
           Results on Minecraft SkillForge benchmark. 
         </h2>
-        <h2 class="subtitle has-text-centered">
+        <h2 class="subtitle has-text-justified">
           <b>Left:</b> Tournament evaluation of GROOT assessed by human players. GROOT performs better than state-of-the-art Minecraft agent STEVE-1. A 150-score gap corresponds to a 70% probability of winning. <br>
           <b>Middle:</b> Winning rate of GROOT v.s. other agents on specific task categories. Colors from red to blue denote a decrease in the winning rate. Apart from the human player, GROOT surpasses all other baselines. <br>
           <b>Right:</b> Success rate on 9 representative tasks. GROOT champions process-oriented tasks,such as dig three down and fill one up and build snow golems.
@@ -223,7 +222,7 @@
         <h2 class="subtitle has-text-centered">
           t-SNE visualization of the goal space. 
         </h2>
-        <h2 class="subtitle has-text-centered">
+        <h2 class="subtitle has-text-justified">
           Each color corresponds to a specific video category. <br>
           <b>Left:</b> Space of randomly initialized video encoder. All the videos are entangled together. <br>
           <b>Middle:</b> Space of GROOT trained with self-supervised learning. The videos are clustered based on their semantics. <br>
@@ -236,7 +235,7 @@
         <h2 class="subtitle has-text-centered">
           Results on solving challenging obtain diamond task. 
        </h2>
-       <h2 class="subtitle has-text-centered">
+       <h2 class="subtitle has-text-justified">
         The vertical dashed lines represent the time when a certain item is first obtained. <br>
         <b>Left:</b> GROOT first dig down to the depth of 12 and then mine horizontally to obtain diamonds with an average success rate of 16%. <br>
         <b>Right:</b> STEVE-1 quickly dig down to the specific depth but struggle to maintain its height. 
@@ -256,6 +255,11 @@
   <div class="hero-body"> <div class="container is-max-desktop">
 
     <h2 class="title is-3">Minecraft SkillForge Benchmark</h2>
+
+    <h2 class="subtitle has-text-justified">
+      In order to comprehensively evaluate the mastery of tasks by agents in Minecraft, we created a diverse benchmark called Minecraft SkillForge. It covers 30 tasks from 6 major categories of representative skills in Minecraft, including collect, explore, craft, tool, survive, and build.
+    </h2>
+
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
