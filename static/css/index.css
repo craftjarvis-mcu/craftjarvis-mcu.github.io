@@ -27,12 +27,9 @@ body {
   font-family: 'Google Sans', sans-serif;
 } */
 
-.teaser {
-  font-family: Cursive;
-}
 
 .hero {
-  font-family: Cursive;
+  font-family: serif, Times, Google Fonts, sans-serif;
   font-weight: bold;
 }
 
@@ -59,17 +56,11 @@ body {
     font-family: 'Google Sans', sans-serif;
 } */
 
-.publication-title {
-  font-family: Cursive;
-}
 
 /* .publication-authors {
     font-family: 'Google Sans', sans-serif;
 } */
 
-.publication-authors {
-  font-family: Cursive;
-}
 
 .publication-venue {
     color: #555;
