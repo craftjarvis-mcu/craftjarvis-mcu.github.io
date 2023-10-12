@@ -182,13 +182,15 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <h2 class="title is-3">Architecture Design</h2>
-    <img src="static/images/architecture.png" alt="MY ALT TEXT"/>
-    <h2 class="subtitle has-text-centered">
-      <br>Left: In the training stage, a video encoder (non-causal transformer) learns to extract the semantic meaning and transfer the video (state sequence) into the goal embedding space. A goal-conditioned policy (causal transformer) is learned to predict actions following the given instructions. We learn the agent using behavior cloning under a KL constraint. 
-       <br>Right: During the inference, any reference video is passed into the video encoder to generate the goal embeddings that drives the policy to interact with the environment. 
-    </h2>
-  </div>
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Architecture Design</h2>
+      <img src="static/images/architecture.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        <br>Left: In the training stage, a video encoder (non-causal transformer) learns to extract the semantic meaning and transfer the video (state sequence) into the goal embedding space. A goal-conditioned policy (causal transformer) is learned to predict actions following the given instructions. We learn the agent using behavior cloning under a KL constraint. 
+        <br>Right: During the inference, any reference video is passed into the video encoder to generate the goal embeddings that drives the policy to interact with the environment. 
+      </h2>
+    </div>
+  </div></div>
 </section>
 <!-- End image carousel -->
 
@@ -198,7 +200,8 @@
 <!-- Image carousel -->
 
 <section class="section hero is-light">
-  <div class="hero-body">
+  <div class="hero-body"> <div class="container is-max-desktop">
+
     <h2 class="title is-3">Experimental Results</h2>
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -240,6 +243,63 @@
        </h2>
      </div>
 
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+
+<!-- Image carousel -->
+<section class="section hero ">
+  <div class="hero-body"> <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Minecraft SkillForge Benchmark</h2>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/bench1.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Examples of tasks in <b>explore</b> category.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/bench2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Examples of tasks in <b>tool</b> category.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/bench3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Examples of tasks in <b>survive</b> category.
+       </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/bench4.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Examples of tasks in <b>build</b> category.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/bench5.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Examples of tasks in <b>collect</b> category.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/bench6.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Examples of tasks in <b>craft</b> category.
+       </h2>
+      </div>
   </div>
 </div>
 </div>
