@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>GROOT: Learning to Follow Instructions by Watching Gameplay Videos</title>
+  <title>MCU: A Task-centric Framework for Open-ended Agent Evaluation in Minecraft</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,23 +52,17 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">GROOT: Learning to Follow Instructions by Watching Gameplay Videos</h1>
+            <h1 class="title is-1 publication-title">MCU: A Task-centric Framework for Open-ended Agent Evaluation in Minecraft</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://phython96.github.io/" target="_blank">Shaofei Cai</a><sup>1,2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="" target="_blank">Bowei Zhang</a><sup>3</sup>,
+                <a href="https://linhaowei1.github.io/" target="_blank">Haowei Lin</a><sup>1,2</sup>,
               </span>
               <span class="author-block">
                 <a href="https://zhwang4ai.github.io/" target="_blank">Zihao Wang</a><sup>1,2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://jeasinema.github.io/" target="_blank">Xiaojian Ma</a><sup>5</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://liuanji.github.io/" target="_blank">Anji Liu</a><sup>4</sup>,
+                <a href="https://majianzhu.com/" target="_blank">Jianzhu Ma</a><sup>3,4</sup>,
               </span>
               <span class="author-block">
                 <a href="" target="_blank">Yitao Liang</a><sup>1*</sup>
@@ -79,9 +73,8 @@
               <span class="author-block"><b>Team CraftJarvis</b></span>
               <span class="eql-cntrb"><br><sup>1</sup>Institute for Artificial Intelligence, Peking University</span>
               <span class="eql-cntrb"><br><sup>2</sup>School of Intelligence Science and Technology, Peking University</span>
-              <span class="eql-cntrb"><br><sup>3</sup>School of Electronics Engineering and Computer Science, Peking University</span>
-              <span class="eql-cntrb"><br><sup>4</sup>Computer Science Department, University of California, Los Angeles</span>
-              <span class="eql-cntrb"><br><sup>5</sup>Beijing Institute for General Artificial Intelligence (BIGAI)</span>
+              <span class="eql-cntrb"><br><sup>3</sup>Institute for AI Industry Research, Tsinghua University</span>
+              <span class="eql-cntrb"><br><sup>4</sup>Department of Electronic Engineering, Tsinghua University</span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding Author</small></span>
             </div>
 
@@ -94,7 +87,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="static/pdfs/GROOT-arxiv.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2310.08367.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -116,7 +109,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/CraftJarvis/GROOT" target="_blank"
+                    <a href="https://github.com/CraftJarvis/MCU" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -127,7 +120,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2310.08235/" target="_blank"
+                  <a href="https://arxiv.org/abs/2310.08367" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -144,23 +137,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Our GROOT can solve open-ended tasks specified by reference videos in the open-world Minecraft. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -169,7 +145,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We study the problem of building a controller that can follow open-ended instructions in open-world environments. We propose to follow reference videos as instructions, which offer expressive goal specifications while eliminating the need for expensive text-gameplay annotations. A new learning framework is derived to allow learning such instruction-following controllers from gameplay videos while producing a video instruction encoder that induces a structured goal space. We implement our agent GROOT in a simple yet effective encoder-decoder architecture based on causal transformers. We evaluate GROOT against open-world counterparts and human players on a proposed Minecraft SkillForge benchmark. The Elo ratings clearly show that GROOT is closing the human-machine gap as well as exhibiting a 70% winning rate over the best generalist agent baseline. Qualitative analysis of the induced goal space further demonstrates some interesting emergent properties, including the goal composition and complex gameplay behavior synthesis. 
+            To pursue the goal of creating an open-ended agent in Minecraft, an open-ended game environment with unlimited possibilities, this paper introduces a task-centric framework named MCU for Minecraft agent evaluation. The MCU framework leverages the concept of atom tasks as fundamental building blocks, enabling the generation of diverse or even arbitrary tasks. Within the MCU framework, each task is measured with six distinct difficulty scores (time consumption, operational effort, planning complexity, intricacy, creativity, novelty). These scores offer a multi-dimensional assessment of a task from different angles, and thus can reveal an agent's capability on specific facets. The difficulty scores also serve as the feature of each task, which creates a meaningful task space and unveils the relationship between tasks. For efficient evaluation of Minecraft agents employing the MCU framework, we maintain a unified benchmark, namely SkillForge, which comprises representative tasks with diverse categories and difficulty distribution. We also provide convenient filters for users to select tasks to assess specific capabilities of agents. We show that MCU has the high expressivity to cover all tasks used in recent literature on Minecraft agent, and underscores the need for advancements in areas such as creativity, precise control, and out-of-distribution generalization under the goal of open-ended Minecraft agent development.
           </p>
         </div>
       </div>
@@ -377,14 +353,12 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-@misc{cai2023groot,
-    title={GROOT: Learning to Follow Instructions by Watching Gameplay Videos}, 
-    author={Shaofei Cai and Bowei Zhang and Zihao Wang and Xiaojian Ma and Anji Liu and Yitao Liang},
-    year={2023},
-    eprint={2310.08235},
-    archivePrefix={arXiv},
-    primaryClass={cs.AI}
-}
+      @article{lin2023mcu,
+        title={MCU: A Task-centric Framework for Open-ended Agent Evaluation in Minecraft},
+        author={Lin, Haowei and Wang, Zihao and Ma, Jianzhu and Liang, Yitao},
+        journal={arXiv preprint arXiv:2310.08367},
+        year={2023}
+      }
       </code></pre>
     </div>
 </section>
