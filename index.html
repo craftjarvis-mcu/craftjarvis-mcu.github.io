@@ -159,11 +159,12 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <h2 class="title is-3">Architecture Design</h2>
-      <img src="static/images/architecture.png" alt="MY ALT TEXT"/>
+      <h2 class="title is-3">Compose arbitrary tasks with atom task</h2>
+      <img src="static/images/MCU.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-justified">
-        <br>Left: In the training stage, a video encoder (non-causal transformer) learns to extract the semantic meaning and transfer the video (state sequence) into the goal embedding space. A goal-conditioned policy (causal transformer) is learned to predict actions following the given instructions. We learn the agent using behavior cloning under a KL constraint. 
-        <br>Right: During the inference, any reference video is passed into the video encoder to generate the goal embeddings that drives the policy to interact with the environment. 
+        The taxonomy of atom task, molecule task, and benchmark in MCU framework. <b>Atom tasks</b> are the basic components of MCU, which can test a minimal ability of Minecraft agent by resolving prerequisite dependencies for the task. By initializing the agents with custom conditions (e.g., craft iron ingot <i>from scratch</i>), adding constraints to the task (e.g., combat a spider <i>using arrow</i>), or combining different tasks (e.g., plant pumpkin <i>and then</i> carve pumpkin), atom tasks can be exploited to generate infinite <b>molecule tasks</b>. By collecting a list of tasks, custom <b>benchmarks</b> can be created to test particular facets of agents' capabilities. They serve as targeted evaluation tools, helping us gain insights into the agent's performance in particular domains or scenarios. 
+        <br>
+        With the task generation approach, MCU can generate infinite benchmarks with arbitrary task lists. To provide a unified benchmark for researchers to test their agents and improve the fairness of comparing different baselines on the same settings, we maintain a benchmark created by MCU named <b>SkillForge</b>. The benchmark comprises representative tasks from MCU which are selected to cover a wide spectrum of categories and diverse difficulty distribution. 
       </h2>
     </div>
   </div></div>
@@ -177,46 +178,28 @@
 
 <section class="section hero is-light">
   <div class="hero-body"> <div class="container is-max-desktop">
-    <h2 class="title is-3">Experimental Results</h2>
+    <h2 class="title is-3">Task Difficulty</h2>
     <div class="container">
+      <h2 class="subtitle has-text-justified">
+        To build an open-ended agent for Minecraft, it is imperative that we analyze the current gap between the existing agents and the ultimate open-ended agent, and then improve the agents accordingly. To be specific, we have to assess the areas where they exhibit shortcomings, e.g., whether they fall short in environment perception, subgoal planning, or precise control. This leads to a disentangled difficulty analysis of tasks.
+      </h2>
+    </div>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/exp1.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Results on Minecraft SkillForge benchmark. 
-        </h2>
+        <img src="static/images/bias.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-justified">
-          <b>Left:</b> Tournament evaluation of GROOT assessed by human players. GROOT performs better than state-of-the-art Minecraft agent STEVE-1. A 150-score gap corresponds to a 70% probability of winning. <br>
-          <b>Middle:</b> Winning rate of GROOT v.s. other agents on specific task categories. Colors from red to blue denote a decrease in the winning rate. Apart from the human player, GROOT surpasses all other baselines. <br>
-          <b>Right:</b> Success rate on 9 representative tasks. GROOT champions process-oriented tasks,such as dig three down and fill one up and build snow golems.
+          The difficulty distributions of existing benchmarks and SkillForge. Darker shades indicate a higher concentration of tasks with the corresponding difficulty scores, while lighter shades signify the converse trend.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/exp2.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          t-SNE visualization of the goal space. 
-        </h2>
+        <img src="static/images/task.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-justified">
-          Each color corresponds to a specific video category. <br>
-          <b>Left:</b> Space of randomly initialized video encoder. All the videos are entangled together. <br>
-          <b>Middle:</b> Space of GROOT trained with self-supervised learning. The videos are clustered based on their semantics. <br>
-          <b>Right:</b> Synthesized videos using concatenation manner. The concatenated videos lay on the position between the source videos. 
+          <b>Left:</b>: Data structure for an Atomic Task: "Craft an iron_sword". In this figure, we provide a concise textual description of the task and list the pre-requisite tasks without displaying the full dependency graph for simplicity. <br>
+          <b>Right:</b>: Visualization of the SkillForge Task Space (filtered) using t-SNE. Each task is depicted by a difficulty feature vector. Notice the clustering effect in the space, where tasks of the same category tend to group together (except for the molecule tasks).
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/exp3.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Results on solving challenging obtain diamond task. 
-       </h2>
-       <h2 class="subtitle has-text-justified">
-        The vertical dashed lines represent the time when a certain item is first obtained. <br>
-        <b>Left:</b> GROOT first dig down to the depth of 12 and then mine horizontally to obtain diamonds with an average success rate of 16%. <br>
-        <b>Right:</b> STEVE-1 quickly dig down to the specific depth but struggle to maintain its height. 
-       </h2>
-     </div>
 
   </div>
 </div>
@@ -226,65 +209,18 @@
 
 
 
-<!-- Image carousel -->
-<section class="section hero ">
-  <div class="hero-body"> <div class="container is-max-desktop">
-
-    <h2 class="title is-3">Minecraft SkillForge Benchmark</h2>
-
-    <h2 class="subtitle has-text-justified">
-      In order to comprehensively evaluate the mastery of tasks by agents in Minecraft, we created a diverse benchmark called Minecraft SkillForge. It covers 30 tasks from 6 major categories of representative skills in Minecraft, including collect, explore, craft, tool, survive, and build.
-    </h2>
-
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/bench1.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Examples of tasks in <b>explore</b> category.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/bench2.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Examples of tasks in <b>tool</b> category.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/bench3.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Examples of tasks in <b>survive</b> category.
-       </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/bench4.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Examples of tasks in <b>build</b> category.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/bench5.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Examples of tasks in <b>collect</b> category.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/bench6.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Examples of tasks in <b>craft</b> category.
-        </h2>
-      </div>
-  </div>
-</div>
-</div>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Minecraft Textworld</h2>
+      <img src="static/images/text.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-justified">
+        <br>Minecraft Textworld is a light-weight environment to test the ability of finding a feasible task chain towards the target tasks by resolving pre-tasks. Given a target task, the agent has to choose the candidate actions in each round to achieve the final task. Each candidate ation is an atom task that can be solved with current conditions (the dependency of the action is solved). 
+        <br>Minecraft Textworld is designed to simplify the Minecraft gaming environment by removing the need for low-level control. While it excels in evaluation efficiency, it is important to underscore that pure planning is not sufficient to supplant the original Minecraft environment, given the vital role that control plays in agent development. Instead, we envision that Minecraft Textworld can serve as a complementary tool, providing researchers with a user-friendly platform to assess and refine their agents through swift, iterative testing.
+      </h2>
+    </div>
+  </div></div>
 </section>
-<!-- End image carousel -->
 
 
 <!-- Image carousel -->
@@ -295,7 +231,19 @@
 
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/related-deps.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            <a href="https://craftjarvis-groot.github.io/">
+              <b>GROOT: Learning to Follow Instructions by Watching Gameplay Videos</b> <br>
+            </a>
+              <b>(Team CraftJarvis)</b> <br>
+          </h2>
+          <h2 class="subtitle has-text-justified">
+            This work proposes to follow reference videos as instructions, which offer expressive goal specifications while eliminating the need for expensive text-gameplay annotations, and implements the agent GROOT in a simple yet effective encoder-decoder architecture based on causal transformers.
+           </h2>
+        </div>
        <div class="item">
         <!-- Your image here -->
         <img src="static/images/related-deps.png" alt="MY ALT TEXT"/>
@@ -344,7 +292,6 @@
 </div>
 </section>
 <!-- End image carousel -->
-
 
 
 
